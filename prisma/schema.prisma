@@ -9,6 +9,25 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Barang {
+  id Int @id @default(autoincrement())
+  nama String
+  jumlah Int
+  harga Int
+  creted_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model User {
+  user_id  String @id @unique @default(uuid())
+  email String @unique
+  nama String @default("")
+  password String
+  role String @default("regular")
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }

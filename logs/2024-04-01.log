@@ -1,0 +1,66 @@
+undefined 2024-04-01 00:00:31 error uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/barang.controller.ts[0m:[93m3[0m:[93m34[0m - [91merror[0m[90m TS2306: [0mFile 'E:/TypeScripts/rest-api-teps/src/services/barang.services.ts' is not a module.
+
+[7m3[0m import { getBarangService } from "../services/barang.services";
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/barang.controller.ts[0m:[93m3[0m:[93m34[0m - [91merror[0m[90m TS2306: [0mFile 'E:/TypeScripts/rest-api-teps/src/services/barang.services.ts' is not a module.
+
+[7m3[0m import { getBarangService } from "../services/barang.services";
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+undefined 2024-04-01 00:07:33 error uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/barang.controller.ts[0m:[93m3[0m:[93m34[0m - [91merror[0m[90m TS2306: [0mFile 'E:/TypeScripts/rest-api-teps/src/services/barang.services.ts' is not a module.
+
+[7m3[0m import { getBarangService } from "../services/barang.services";
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/barang.controller.ts[0m:[93m3[0m:[93m34[0m - [91merror[0m[90m TS2306: [0mFile 'E:/TypeScripts/rest-api-teps/src/services/barang.services.ts' is not a module.
+
+[7m3[0m import { getBarangService } from "../services/barang.services";
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+undefined 2024-04-01 00:09:34 error uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/barang.controller.ts[0m:[93m3[0m:[93m34[0m - [91merror[0m[90m TS2306: [0mFile 'E:/TypeScripts/rest-api-teps/src/services/barang.services.ts' is not a module.
+
+[7m3[0m import { getBarangService } from "../services/barang.services";
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/barang.controller.ts[0m:[93m3[0m:[93m34[0m - [91merror[0m[90m TS2306: [0mFile 'E:/TypeScripts/rest-api-teps/src/services/barang.services.ts' is not a module.
+
+[7m3[0m import { getBarangService } from "../services/barang.services";
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\TypeScripts\rest-api-teps\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)

@@ -1,7 +1,10 @@
 import { Router } from "express";
-import { getBarang, postBarang } from "../controllers/barang.controller";
+import { deleteBarang, getBarang, getBarangById, postBarang, updateBarang } from "../controllers/barang.controller";
 
 export const barangRoute = Router();
 
 barangRoute.get("/barang", getBarang)
+barangRoute.get("/barang/:id", getBarangById)
 barangRoute.post("/barang", postBarang)
+barangRoute.put("/barang/:id", updateBarang)
+barangRoute.delete("/barang/:id", deleteBarang)
