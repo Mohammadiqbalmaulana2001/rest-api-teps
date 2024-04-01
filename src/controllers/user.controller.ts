@@ -2,7 +2,7 @@ import { NextFunction , Request , Response } from "express";
 import { loginUserValidation, registerUserValidation } from "../validations/user.validation";
 import { loginUserService, registerUserService } from "../services/user.service";
 import { compare, encript } from "../utils/bcrypt";
-import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
+import { generateAccessToken, generateRefreshToken, parseJWT, verifyRefreshToken } from "../utils/jwt";
 import jsonwebtoken from "jsonwebtoken";
 
 
@@ -77,6 +77,53 @@ export const loginUserController = async(req: Request, res: Response , next : Ne
         next(
             new Error(
                 'Error pada file src/controllers/user.controller.ts : loginUser - ' +
+                String((error as Error).message)
+            )
+        )
+    }
+}
+
+export const refreshTokenController = async(req: Request, res: Response , next : NextFunction) => {
+    try {
+        const authHeadder = req.headers.authorization
+        const token = authHeadder?.split(' ')[1]
+        if(token === undefined) {
+            return res.status(401).json({
+                error : 'Unauthorized',
+                message: "Token tidak ditemukan",
+                data: null
+            })
+        }
+        const verify = verifyRefreshToken(String(token))
+        if(verify === null) {
+            return res.status(401).json({
+                error : 'token tidak valid',
+                message: "Verifikasi refresh token gagal",
+                data: null
+            })
+        }
+        const data = await parseJWT(String(token))
+        const user = await loginUserService(data)
+        if(user === null) {
+            return res.status(401).json({
+                error : 'token tidak valid',
+                message: "Verifikasi refresh token gagal",
+                data: null
+            })
+        }
+
+        user.password = 'xxxxxx'
+        const accesToken = generateAccessToken(user)
+        const refresToken = generateRefreshToken(user)
+        return res.status(200).json({
+            error : null,
+            message: "Refresh token berhasil",
+            data: user, accesToken, refresToken
+        })
+    } catch (error) {
+        next(
+            new Error(
+                'Error pada file src/controllers/user.controller.ts : refreshToken - ' +
                 String((error as Error).message)
             )
         )
