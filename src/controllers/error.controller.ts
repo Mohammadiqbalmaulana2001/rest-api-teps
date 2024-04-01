@@ -1,5 +1,6 @@
 import { Request , Response, NextFunction } from "express";
 import { logger } from "../utils/winston";
+import { verifyAccessToken } from "../utils/jwt";
 
 export const errorHandler = async (err: Error, req:Request, res: Response, next: NextFunction): Promise<void> => {
     const message = err.message.split(' - ')[1]
@@ -17,4 +18,26 @@ export const notFound = async (req:Request, res: Response, next: NextFunction): 
         message: "Endpoint Tidak ditemukan",
         data: null
     })
+}
+
+export const auntenticate = async (req:Request, res: Response, next: NextFunction) => {
+    const authHeadder = req.headers.authorization
+    const token = authHeadder?.split(' ')[1]
+    if(token === undefined){
+        return res.status(401).json({
+            error: "Unauthorized",
+            message: "Verifikasi token gagal",
+            data: null
+        })
+    }
+
+    const user = verifyAccessToken(String(token))
+    if (user === null) {
+        return res.status(401).json({
+            error: "Token tidak valid",
+            message: "Verifikasi token gagal",
+            data: null
+        })
+    }
+    next()
 }
