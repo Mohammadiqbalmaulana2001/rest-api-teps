@@ -64,3 +64,8 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.load (node:internal/modules/cjs/loader:1207:32)
     at Function.Module._load (node:internal/modules/cjs/loader:1023:12)
     at Module.require (node:internal/modules/cjs/loader:1235:19)
+undefined 2024-04-01 13:09:55 error Error pada file src/controllers/user.controller.ts : loginUser - secretOrPrivateKey must have a value
+undefined 2024-04-01 13:15:18 error Error pada file src/controllers/user.controller.ts : loginUser - secretOrPrivateKey must have a value
+undefined 2024-04-01 13:16:05 error Error pada file src/controllers/user.controller.ts : loginUser - secretOrPrivateKey must have a value
+undefined 2024-04-01 13:22:22 error Error pada file src/controllers/user.controller.ts : loginUser - secretOrPrivateKey must have a value
+undefined 2024-04-01 13:26:33 error Error pada file src/controllers/user.controller.ts : loginUser - secretOrPrivateKey must have a value
