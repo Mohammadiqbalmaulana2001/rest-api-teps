@@ -31,3 +31,12 @@ model User {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }
+
+model Product {
+  id          Int       @id @default(autoincrement())
+  name        String    
+  description String?   
+  price       Float     
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}

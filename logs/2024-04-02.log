@@ -1,0 +1,27 @@
+undefined 2024-04-02 15:00:21 error Error pada file src/controllers/product.controller.ts : postProductController - 
+Invalid `prisma.product.create()` invocation in
+E:\TypeScripts\rest-api-teps\src\services\product.service.ts:20:39
+
+  17 }
+  18 
+  19 export const postProductService = async (payload : productType) : Promise<productType> => {
+→ 20     const data = await prisma.product.create({
+         + data: ProductCreateInput | ProductUncheckedCreateInput
+         })
+
+Argument `data` is missing.
+undefined 2024-04-02 15:07:12 error Error pada file src/controllers/product.controller.ts : postProductController - 
+Invalid `prisma.product.create()` invocation in
+E:\TypeScripts\rest-api-teps\src\services\product.service.ts:20:39
+
+  17 }
+  18 
+  19 export const postProductService = async (payload : productType) : Promise<productType> => {
+→ 20     const data = await prisma.product.create({
+           data: {
+         +   name: String
+           }
+         })
+
+Argument `name` is missing.
+undefined 2024-04-02 15:08:08 error Error pada file src/controllers/product.controller.ts : postProductController - Cannot read properties of undefined (reading 'name')
