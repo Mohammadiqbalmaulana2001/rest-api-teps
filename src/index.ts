@@ -1,13 +1,8 @@
-import express, { Application ,Request ,Response , NextFunction} from "express";
-import dotenv from "dotenv";
-import appMidleware from "./middleware/index.middleware";
-
-const app:Application = express();
-dotenv.config();
-
-app.use(appMidleware)
+import "dotenv/config";
+import web from "./middleware/web.middleware";
 
 const  port:number = parseInt(process.env.PORT as string)
-app.listen(port, () => {
+
+web.listen(port, () => {
     console.log(`server berjalan pada http://localhost:${port}`)
 })
